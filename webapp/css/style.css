@@ -1,0 +1,38 @@
+/* Enter your custom styles here */
+.padding{
+	padding-top:10px;
+}
+.testInfoBox {
+	padding: 15px 10px;
+	margin: 10px 0px;
+	background-color: #ececec;
+}
+.boldedLabel {
+	font-weight: bold;
+	margin-right: 7px;
+}
+.textLine {
+	margin: 5px 0px;
+}
+.textLineBig {
+	margin: 10px 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.sectionTitle {
+	padding: 10px 0px 10px 10px;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+.sectionTitleBckg {
+	background-color: #ececec;
+}
+.hboxBorder {
+	border: 2px solid #ececec;
+	padding: 0px;
+	margin: 10px 0px;
+}
+.footer {
+	padding: 15px 0px;
+}

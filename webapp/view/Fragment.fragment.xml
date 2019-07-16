@@ -1,0 +1,193 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" >
+   <Dialog title="New Business Function" contentWidth="90%" >
+   	<l:Grid defaultSpan = "L12 M12 S12" id = "idGrid">
+    <l:content>
+       	<Hbox class="padding">
+						<VBox width="0%" ></VBox>
+						<VBox width="100%" justifyContent="Start">
+							<HBox justifyContent="SpaceBetween">
+								<VBox width="33%" >
+									<Label text="Client ID" labelFor="clientId"/>
+									<Input
+										id="clientId"
+										type="Text"
+										placeholder="Enter Client ID ..." />
+								</VBox>
+								<VBox width="33%" >
+									<Label text="Lab Test ID" labelFor="labTestId"/>
+									<Select
+									    id = "selLabTest"
+									    width = "100%"
+										forceSelection="false"
+										selectedKey="{/SelectedTest}"
+										items="{
+											path: '/LabTests',
+											sorter: { path: 'TestID' }
+										}">
+										<core:Item key="{TestID}" text="{TestID} - {Name}" />
+									</Select>
+								</VBox>
+								<VBox width="33%" >
+									<Label text="Test Date" labelFor="testDate"/>
+									<DatePicker
+										id="testDate"
+										displayFormat="short"
+										change="updateDate"
+										placeholder="Pick a date ..." />
+								</VBox>
+							</HBox>
+							<HBox justifyContent="SpaceBetween"
+								  class = "testInfoBox">
+								<VBox width="33%" >
+									<Hbox class="textLine">
+										<Label text="Insured Name:" class="boldedLabel" />
+										<Text
+											id = "txtInsuredNameId"
+											text = "Roshankumar Patel" />
+									</Hbox>
+									<Hbox class="textLine">
+										<Label text="Client ID:" class="boldedLabel" />
+										<Text
+											id = "txtclientId"
+											text = "A00001" />
+									</Hbox>
+									<Hbox class="textLine">
+										<Label text="Date Test Performed:" class="boldedLabel" />
+										<Text
+											id = "txtTestDate"
+											text = "15/05/2019" />
+									</Hbox>
+								</VBox>
+								<VBox width="33%" >
+									<Hbox class="textLine">
+										<Label text="Sex:" class="boldedLabel" />
+										<Text
+											id = "txtSexId"
+											text = "Male" />
+									</Hbox>
+									<Hbox class="textLine">
+										<Label text="Lab Test ID:" class="boldedLabel" />
+										<Text
+											id = "txtLabTestId"
+											text = "1000 - Apolipop A1" />
+									</Hbox>
+								</VBox>
+								<VBox width="33%" >
+									<Hbox class="textLine">
+										<Label text="Age:" class="boldedLabel" />
+										<Text
+											id = "txtAgeId"
+											text = "40" />
+									</Hbox>
+									<Hbox class="textLine">
+										<Label text="Sequence Number:" class="boldedLabel" />
+										<Text
+											id = "txtSeqNumId"
+											text = "802" />
+									</Hbox>
+								</VBox>
+							</HBox>
+							<HBox justifyContent="SpaceBetween" class="hboxBorder">
+								<VBox width="100%">
+									<HBox class="sectionTitleBckg" >
+										<Text width="100%" text="Laboratory and Test Information" class="sectionTitle"/>
+									</HBox>
+									<VBox width="70%" class="textLineBig">
+										<Label text="Laboratory Name" labelFor="selLabName" class="boldedLabel"/>
+										<Select
+										    id = "selLabName"
+										    width = "100%"
+											forceSelection="false">
+											<core:Item key="{TestID}" text="{TestID} - {Name}" />
+										</Select>
+									</VBox>
+									<VBox width="70%" class="textLineBig" >
+										<Label text="Test Status" labelFor="selTestStatus" class="boldedLabel"/>
+										<Select
+										    id = "selTestStatus"
+										    width = "100%"
+											forceSelection="false">
+											<core:Item key="{TestID}" text="{TestID} - {Name}" />
+										</Select>
+									</VBox>
+									<VBox width="70%" class="textLineBig" >
+										<Label text="Lab Remark Text" labelFor="taLabRemText" class="boldedLabel"/>
+										<TextArea id="taLabRemText" width="100%" rows="1" placeholder="Add Remark Text" />
+									</VBox>
+								</VBox>
+							</HBox>
+							<HBox justifyContent="SpaceBetween" class="hboxBorder">
+								<VBox width="100%">
+									<HBox class="sectionTitleBckg" >
+										<Text width="100%" text="Test Results" class="sectionTitle"/>
+									</HBox>
+									<HBox>
+										<VBox width="50%" class="textLineBig" >
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Result Type" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptResultType" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Result Type" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptTestResult" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Last Meal Date" labelFor="taLabRemText" class="boldedLabel"/>
+												<DatePicker id="dpLastMealDate" displayFormat="short" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Appearance of Urine" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptAppearanceUrine" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Date Urin Analisys Sample Taken" labelFor="taLabRemText" class="boldedLabel"/>
+												<DatePicker id="dpUrineDateTaken" displayFormat="short" />
+											</VBox>
+										</VBox>
+										<VBox width="50%" class="textLineBig" >
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Test Result Quantity" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptTestResQty" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Unit of Measure" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptUnit" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Last Meal Time" labelFor="taLabRemText" class="boldedLabel"/>
+												<TimePicker id="tpLastMealTime" width="100%" valueFormat="HH:mm" displayFormat="HH:mm" placeholder="Enter time of the last meal"  />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Appearance of Serum" labelFor="taLabRemText" class="boldedLabel"/>
+												<Input id="inptAppOfSerum" type="Text" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Date Blood Sample Drained" labelFor="taLabRemText" class="boldedLabel"/>
+												<DatePicker id="dpDateBloodTaken" displayFormat="short" />
+											</VBox>
+											<VBox width="100%" class="textLineBig" >
+												<Label text="Time Blood Sample Drained" labelFor="taLabRemText" class="boldedLabel"/>
+												<TimePicker id="tpTimeBloodTaken" width="100%" valueFormat="HH:mm" displayFormat="HH:mm" placeholder="Enter time of blood drain" />
+											</VBox>
+										</VBox>
+									</HBox>
+								</VBox>
+							</HBox>
+							<HBox justifyContent="Center" class="footer">
+								<Button type="Default" text="Synchronize" width="100%" icon="sap-icon://synchronize" tooltip="Synchronize" />
+							</HBox>
+						</VBox>
+						<VBox width="0%" ></VBox>						
+					</Hbox>
+    </l:content>
+    </l:Grid>
+   	<buttons>
+    	<Button text = "Cancel" press = "cancelNbf" type = "Reject"/>
+		<Button text = "Create" press = "createNbf" type = "Accept"/>
+    </buttons>	
+   </Dialog>
+</core:FragmentDefinition>

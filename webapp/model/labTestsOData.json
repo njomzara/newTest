@@ -1,0 +1,29 @@
+{
+	"SelectedTest" : "1000",
+	"LabTests": [
+		{
+			"TestID": "1000",
+			"Name": "Apolipop A1"
+		},
+		{
+			"TestID": "1025",
+			"Name": "Apolipop B"
+		},
+		{
+			"TestID": "1030",
+			"Name": "Apolipop A1/B"
+		},
+		{
+			"TestID": "1050",
+			"Name": "Cbc - HCT"
+		},
+		{
+			"TestID": "1075",
+			"Name": "Cbc - HGB"
+		},
+		{
+			"TestID": "1100",
+			"Name": "Cbc - MCH"
+		}
+	]
+}
